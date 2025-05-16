@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Relative Layout"
 include(":app")
- 
