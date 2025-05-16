@@ -2,7 +2,11 @@ package com.example.loginform
 
 import android.os.Bundle
 import android.widget.*
+
 import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,19 +21,16 @@ class MainActivity : AppCompatActivity() {
         val existUsername = "Admin"
         val existPassword = "admin"
 
+
         loginBtn.setOnClickListener{
             val user = username.text.toString()
             val pass = password.text.toString()
+
             if (user == existUsername && pass == existPassword) {
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Invalid Username or Password", Toast.LENGTH_SHORT).show()
             }
-        }
-
-        resetBtn.setOnClickListener {
-            username.text.clear()
-            password.text.clear()
         }
     }
 }
