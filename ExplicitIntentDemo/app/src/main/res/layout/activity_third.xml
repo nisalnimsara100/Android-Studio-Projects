@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for the ThirdActivity.
+    Simple layout with just a thank you message.
+    This is the final screen in the app flow.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,6 +14,7 @@
     android:orientation="vertical"
     android:padding="24dp">
 
+    <!-- Thank You message displayed to the user at the end of the flow -->
     <TextView
         android:id="@+id/textViewThankYou"
         android:layout_width="wrap_content"
