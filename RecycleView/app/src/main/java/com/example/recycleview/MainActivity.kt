@@ -25,4 +25,3 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = TextAdapter(items)
         }
     }
-}
