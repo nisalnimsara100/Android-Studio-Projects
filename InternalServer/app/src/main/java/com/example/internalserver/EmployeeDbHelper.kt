@@ -25,7 +25,7 @@ class EmployeeDbHelper(context: Context):
         onCreate(db)
     }
 
-    fun insertEmployee(name: String, email: String): Boolean {
+    fun insertEmployee(name: String, email: String, email1: String): Boolean {
         val db = writableDatabase
         val values = ContentValues().apply {
             put("name", name)
@@ -49,6 +49,8 @@ class EmployeeDbHelper(context: Context):
                 val email = cursor.getString(2)
                 builder.append("ID: $id, Name: $name, Email: $email\n")
             } while (cursor.moveToNext())
+        } else {
+            builder.append("No records found.")
         }
         cursor.close()
         return builder.toString()
