@@ -40,18 +40,18 @@ class EmployeeDbHelper(context: Context):
     fun getAllEmployees():String{
         val db = readableDatabase
         val cursor = db.rawQuery("SELECT * FROM Employee", null)
-        val employees = StringBuilder()
+        val builder = StringBuilder()
 
         if (cursor.moveToFirst()) {
             do {
-                val id = cursor.getInt(cursor.getColumnIndex("id"))
-                val name = cursor.getString(cursor.getColumnIndex("name"))
-                val email = cursor.getString(cursor.getColumnIndex("email"))
-                employees.append("ID: $id, Name: $name, Email: $email\n")
+                val id = cursor.getInt(0)
+                val name = cursor.getString(1)
+                val email = cursor.getString(2)
+                builder.append("ID: $id, Name: $name, Email: $email\n")
             } while (cursor.moveToNext())
         }
         cursor.close()
-        return employees.toString()
+        return builder.toString()
     }
 
 }
