@@ -49,6 +49,13 @@
         android:text="View Employees"
         android:layout_marginTop="8dp"/>
 
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Employees"
+        android:layout_marginTop="8dp"/>
+
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="match_parent"

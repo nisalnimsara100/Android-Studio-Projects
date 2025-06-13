@@ -1,5 +1,6 @@
 package com.example.internalserver
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -16,7 +17,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var tvResult: TextView
     lateinit var btnInsert: Button
     lateinit var btnView: Button
+    lateinit var btnDelete: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         tvResult = findViewById(R.id.tvResult)
         btnInsert = findViewById(R.id.btnInsert)
         btnView = findViewById(R.id.btnView)
+        btnDelete = findViewById(R.id.btnDelete)
 
         btnInsert.setOnClickListener {
             val id = etID.text.toString().toIntOrNull()
@@ -49,9 +53,27 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill all fields correctly.", Toast.LENGTH_SHORT).show()
             }
         }
+
         btnView.setOnClickListener{
             val result = dbHelper.getAllEmployees()
             tvResult.text = result
+        }
+
+        btnDelete.setOnClickListener {
+            val id = etID.text.toString().toIntOrNull()
+            if (id != null) {
+                val success = dbHelper.deleteEmployee(id)
+                if (success) {
+                    Toast.makeText(this, "Employee deleted successfully.", Toast.LENGTH_SHORT).show()
+                    etID.text.clear()
+                    etName.text.clear()
+                    etEmail.text.clear()
+                } else {
+                    Toast.makeText(this, "Failed to delete employee.", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Please enter a valid ID.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
