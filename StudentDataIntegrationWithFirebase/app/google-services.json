@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "650726228548",
+    "firebase_url": "https://fir-integration-13795-default-rtdb.firebaseio.com",
+    "project_id": "fir-integration-13795",
+    "storage_bucket": "fir-integration-13795.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650726228548:android:369d53836a5945c08eb211",
+        "android_client_info": {
+          "package_name": "com.example.firebaseconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC11J52-bP2dscD-dLqfneNKNBH3MknmJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650726228548:android:654a2bee71c47d678eb211",
+        "android_client_info": {
+          "package_name": "com.example.firebaseintegration"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC11J52-bP2dscD-dLqfneNKNBH3MknmJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650726228548:android:160f5f40e36f3d0a8eb211",
+        "android_client_info": {
+          "package_name": "com.example.studentdataintegrationwithfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC11J52-bP2dscD-dLqfneNKNBH3MknmJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
